@@ -26,7 +26,17 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["check-manifest"]
+dev = ["check-manifest",
+    "jupyter", ]
+test = [
+    "coverage",
+    "hypothesis",
+    "pytest",
+]
+present = [
+    "jupyterlab_rise"
+
+]
 
 [project.urls]
 "Homepage" = "https://github.com/hollandjg/testing-dscov"
