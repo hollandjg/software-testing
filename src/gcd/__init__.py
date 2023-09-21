@@ -1,3 +1,6 @@
+from tqdm.auto import tqdm
+
+
 def main(a: int, b: int):
     print(gcd(a, b))
 
@@ -12,11 +15,9 @@ def gcd(a: int, b: int) -> int:
 
     gcd = 0
 
-    div = low
-    while div > 0:
+    for div in tqdm(range(low, 1, -1)):
         if (low % div == 0) and (high % div == 0):
             if gcd < div:
                 gcd = div
-        div -= 1
 
     return gcd

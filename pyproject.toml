@@ -20,9 +20,8 @@ classifiers = [
 ]
 
 dependencies = [
-    "coverage",
-    "hypothesis",
-    "pytest",
+"tqdm"
+    
 ]
 
 [project.optional-dependencies]
