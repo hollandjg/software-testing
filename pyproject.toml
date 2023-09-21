@@ -1,0 +1,43 @@
+# based on https://github.com/pypa/sampleproject/blob/main/pyproject.toml
+
+[project]
+name = "testingdscov"
+description = "Code and slides for the DSCoV talk on software testing"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE.txt" }
+keywords = ["test", "development"]
+authors = [{ name = "John Gerrard Holland", email = "john_holland1@brown.edu" }]
+dynamic = ["version"]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Build Tools",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+
+dependencies = [
+    "coverage",
+    "hypothesis",
+    "pytest",
+]
+
+[project.optional-dependencies]
+dev = ["check-manifest"]
+
+[project.urls]
+"Homepage" = "https://github.com/hollandjg/testing-dscov"
+"Bug Reports" = "https://github.com/hollandjg/testing-dscov/issues"
+"Source" = "https://github.com/hollandjg/testing-dscov/"
+
+[project.scripts]
+gcd = "gcd:main"
+
+[tool.setuptools]
+
+[build-system]
+requires = ["setuptools>=43.0.0", "setuptools-scm", "wheel"]
+build-backend = "setuptools.build_meta"
