@@ -14,13 +14,15 @@ def gcd(a: int, b: int) -> int:
 
     low, high = min(a, b), max(a, b)
 
-    gcd = 0
+    _gcd = 0
 
     div = low
     while div > 0:
         if (low % div == 0) and (high % div == 0):
-            if gcd < div:
-                gcd = div
+            if _gcd < div:
+                _gcd = div
         div -= 1
 
-    return gcd
+    return _gcd
+
+
