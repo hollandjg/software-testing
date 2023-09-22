@@ -1,3 +1,6 @@
+from typing import Literal
+
+
 def main(a: int, b: int):
     print(gcd(a, b))
 
@@ -26,3 +29,8 @@ def gcd(a: int, b: int) -> int:
     return _gcd
 
 
+def gcd_euclidean(a: int, b: int):
+    # Adapted from https://www.geeksforgeeks.org/euclidean-algorithms-basic-and-extended/
+    if a == 0:
+        return b
+    return gcd_euclidean(b % a, a)
