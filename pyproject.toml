@@ -32,6 +32,8 @@ test = [
     "coverage",
     "hypothesis",
     "pytest",
+    "sympy",
+    "numpy"
 ]
 present = [
     "jupyterlab_rise"
