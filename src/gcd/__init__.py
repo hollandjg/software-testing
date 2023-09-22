@@ -3,10 +3,14 @@ def main(a: int, b: int):
 
 
 def gcd(a: int, b: int) -> int:
-    assert a >= 0, "a must be positive or zero"
-    assert b >= 0, "b must be positive or zero"
-    assert type(a) is int, "a must be an integer"
-    assert type(b) is int, "b must be an integer"
+    if type(a) is not int:
+        raise TypeError("a must be an integer")
+    if a < 0:
+        raise ValueError("a must be ≥ 0")
+    if type(b) is not int:
+        raise TypeError("b must be an integer")
+    if b < 0:
+        raise ValueError("b must be ≥ 0")
 
     low, high = min(a, b), max(a, b)
 
