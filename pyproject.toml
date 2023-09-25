@@ -26,8 +26,10 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["check-manifest",
-    "jupyter", ]
+dev = [
+    "check-manifest",
+    "jupyterlab",
+]
 test = [
     "coverage",
     "hypothesis",
@@ -37,7 +39,6 @@ test = [
 ]
 present = [
     "jupyterlab_rise"
-
 ]
 
 [project.urls]
