@@ -7,15 +7,15 @@ def main(a: int, b: int):
     print(gcd(a, b))
 
 
-def gcd(a: int, b: int) -> int:
-    """Algorithm to calculate greatest common divisor of two integers"""
+def gcd(x: int, y: int) -> int:
+    """Algorithm to calculate the greatest common divisor of two integers"""
 
-    if type(a) is not int or type(b) is not int:
-        raise TypeError("a and b must be integers")
-    if a < 0 or b < 0:
-        raise ValueError("a and b must be ≥ 0")
+    if type(x) is not int or type(y) is not int:
+        raise TypeError("x and y must be integers")
+    if x < 0 or y < 0:
+        raise ValueError("x and y must be ≥ 0")
 
-    low, high = min(a, b), max(a, b)
+    low, high = min(x, y), max(x, y)
 
     _gcd = 0
 
@@ -29,22 +29,22 @@ def gcd(a: int, b: int) -> int:
     return _gcd
 
 
-def gcd_euclidean(a: int, b: int):
+def gcd_euclidean(x: int, y: int):
     # Adapted from https://www.geeksforgeeks.org/euclidean-algorithms-basic-and-extended/
-    if a == 0:
-        return b
-    return gcd_euclidean(b % a, a)
+    if x == 0:
+        return y
+    return gcd_euclidean(y % x, x)
 
 
-def gcd_optimized(a: int, b: int) -> int:
+def gcd_optimized(x: int, y: int) -> int:
     """Calculate greatest common divisor of two integers"""
 
-    if type(a) is not int or type(b) is not int:
-        raise TypeError("a and b must be integers")
-    if a < 0 or b < 0:
-        raise ValueError("a and b must be ≥ 0")
+    if type(x) is not int or type(y) is not int:
+        raise TypeError("x and y must be integers")
+    if x < 0 or y < 0:
+        raise ValueError("x and y must be ≥ 0")
 
-    low, high = min(a, b), max(a, b)
+    low, high = min(x, y), max(x, y)
 
     _gcd = 0
 
@@ -57,16 +57,16 @@ def gcd_optimized(a: int, b: int) -> int:
     return _gcd
 
 
-def gcd_numpy(a: np.int64, b: np.int64) -> int:
-    """Algorithm to calculate greatest common divisor of two integers"""
-    a, b = np.int64(a), np.int64(b)
+def gcd_numpy(x: np.int64, y: np.int64) -> int:
+    """Algorithm to calculate the greatest common divisor of two integers"""
+    x, y = np.int64(x), np.int64(y)
 
-    if type(a) is not np.int64 or type(b) is not np.int64:
-        raise TypeError("a and b must be integers")
-    if a < 0 or b < 0:
-        raise ValueError("a and b must be ≥ 0")
+    if type(x) is not np.int64 or type(y) is not np.int64:
+        raise TypeError("x and y must be integers")
+    if x < 0 or y < 0:
+        raise ValueError("x and y must be ≥ 0")
 
-    low, high = np.min([a, b]), np.max([a, b])
+    low, high = np.min([x, y]), np.max([x, y])
 
     _gcd = 0
 
