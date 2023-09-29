@@ -29,6 +29,7 @@ dependencies = [
 dev = [
     "check-manifest",
     "jupyterlab",
+    "nb-clean"
 ]
 test = [
     "coverage",
