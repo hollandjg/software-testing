@@ -35,7 +35,8 @@ test = [
     "hypothesis",
     "pytest",
     "sympy",
-    "numpy"
+    "numpy",
+    "coverage"
 ]
 present = [
     "jupyterlab_rise"
@@ -54,3 +55,9 @@ gcd = "gcd:main"
 [build-system]
 requires = ["setuptools>=43.0.0", "setuptools-scm", "wheel"]
 build-backend = "setuptools.build_meta"
+
+
+[tool.coverage.run]
+omit = [
+    "test_*",
+    ]
